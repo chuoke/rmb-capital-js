@@ -15,23 +15,16 @@
 使用 npm 安装:
 
 ```bash
-npm install chuoke/rmb-capital
+npm i rmb-capital
 ```
 
 ## 使用
 
 ```js
-$rmbCapital = new Chuoke\RmbCapital\RmbCapital();
+import { rmbCapital } from 'rmb-capital'
 
-echo $rmbCapital->convert(123456789.01);
+console.log(rmbCapital123456789.01));
 // 人民币壹亿贰仟叁佰肆拾伍万陆仟柒佰捌拾玖元零壹分
-```
-
-如果不需要返回”人民币“ 前缀
-
-```js
-$rmbCapital->withoutPrefix()->convert(123456789.01);
-// 壹亿贰仟叁佰肆拾伍万陆仟柒佰捌拾玖元零壹分
 ```
 
 > 在转换前一定确保数字的正确性。最大金额到万亿级。
