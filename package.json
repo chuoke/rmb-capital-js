@@ -1,6 +1,6 @@
 {
   "name": "rmb-capital",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "阿拉伯数字金额转为汉字大写",
   "main": "src/index.ts",
   "scripts": {
