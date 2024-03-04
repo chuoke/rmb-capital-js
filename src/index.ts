@@ -66,7 +66,7 @@ function convertInteger(amount: string | number, options?: RmbCapitalConverterOp
     // 阿拉伯金额数字中间有“0”时，汉字大写金额要写“零”字；
     // 数字中间连续有几个“0”，汉字大写金额可以只写一个“零”字
 
-    let last: number|null = null;
+    let last: number | null = null;
     for (let i = 0; i < integerNumbers.length; i += 4) {
         const chunk = integerNumbers.slice(i, i + 4);
         const chunkKey = i / 4;
@@ -121,7 +121,7 @@ function convertDecimal(amount: string | number, options?: RmbCapitalConverterOp
     }
 
     const decimalNumbers = decimal.split('');
-    
+
     const jiao = parseInt(decimalNumbers.shift() || ''); // 角比较特殊
 
     if (jiao) {
