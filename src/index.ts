@@ -52,7 +52,7 @@ export function rmbCapital(amount: string | number, options?: RmbCapitalConverte
  * @param options 
  * @returns 
  */
-function convertInteger(amount: string | number, options?: RmbCapitalConverterOptions): string {
+export function convertInteger(amount: string | number, options?: RmbCapitalConverterOptions): string {
     const config = { ...defaultRmbCapitalConverterConfig, ...(options || {}) } as RmbCapitalConverterConfig;
 
     const parts = (amount + '').trim().split('.');
@@ -107,7 +107,7 @@ function convertInteger(amount: string | number, options?: RmbCapitalConverterOp
  * @param options 
  * @returns 
  */
-function convertDecimal(amount: string | number, options?: RmbCapitalConverterOptions): string {
+export function convertDecimal(amount: string | number, options?: RmbCapitalConverterOptions): string {
     const config = { ...defaultRmbCapitalConverterConfig, ...(options || {}) } as RmbCapitalConverterConfig;
     const result: string[] = [];
 

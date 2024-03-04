@@ -1,7 +1,16 @@
 {
   "compilerOptions": {
+    "target": "es2018",
+    "module": "esnext",
+    "lib": ["esnext"],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
     "outDir": "dist",
-    "lib": ["es2016"],
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true
