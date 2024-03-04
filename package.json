@@ -1,13 +1,36 @@
 {
   "name": "rmb-capital",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "阿拉伯数字金额转为汉字大写",
-  "main": "dist/index.js",
-  "files": [ "dist" ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "browser": "./dist/rmb-capital.min.js",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "tsc",
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "release": "bumpp && npm publish",
     "test-watch": "vitest",
-    "test": "vitest run"
+    "test": "vitest run",
+    "rollup": "rollup -c",
+    "typecheck": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -24,7 +47,13 @@
   },
   "homepage": "https://github.com/chuoke/rmb-capital-js#readme",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "bumpp": "^9.3.1",
+    "rollup": "^4.12.0",
     "typescript": "^5.3.3",
+    "unbuild": "^2.0.0",
     "vitest": "^1.3.1"
   }
 }
